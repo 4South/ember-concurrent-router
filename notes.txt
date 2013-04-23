@@ -1,0 +1,11 @@
+Splash page -> 
+  4South Studios
+
+  We are a software development team focused on creating 
+  rich, browser applications in javascript/html5
+
+  consulting
+  contact information
+  about
+  talks
+  open source

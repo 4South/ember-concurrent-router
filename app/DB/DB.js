@@ -6,7 +6,7 @@ exports.mongoose = mongoose;
 
 //DATABASE SETUP
 //connect to locally running mongodb
-var dbString = "mongodb://localhost:27017/authapp";
+var dbString = "mongodb://localhost:27017/4south";
 mongoose.connect(dbString, 
 function(err) {
   if (err) throw err;
