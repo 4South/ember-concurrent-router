@@ -1,14 +1,6 @@
-##Project template##
-This project is a base for rich web applications running an express.js server (on node.js) serving data from mongodb over API endpoints to a 
-javascript application primarily powered by ember.js.
-##Project Dependencies##
-1. Ruby, Gem, Sass-gem
-2. mongodb
-3. node, npm
+##Purpose
+This project is an attempt to design and build a concurrent router system for Ember.js.
 
-##Setup##
-1. Clone this repo
-2. Run ```npm install```
+##Concurrent Router??
+Currently in Ember.js, it is not possible to serialize/deserialize multiple concurrent states in a single Route.  This poses serious limitations on UI structure.
 
-##Building and Running the Project##
-This project supports many rich features afforded by a grunt build pipeline.  To run grunt, type ```grunt 4south```.

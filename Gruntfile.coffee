@@ -1,13 +1,8 @@
 'use strict'
-path = require('path')
-
-folderMount = (connect, point) ->
-  connect.static(path.resolve(point))
 
 module.exports = (grunt) ->
   
   grunt.initConfig
-    pkg: grunt.file.readJSON('package.json')
   
     minispade:
       options:
@@ -17,11 +12,6 @@ module.exports = (grunt) ->
       files:
         src: ['public/js/**/*.js']
         dest: 'public/dist/appjs.js'
-
-    concat:
-      css:
-        src: "public/css/**/*.css"
-        dest: "public/dist/appcss.css"
 
     sass:
       dist:
@@ -39,22 +29,9 @@ module.exports = (grunt) ->
         files:
           "public/dist/apptemplates.js": "public/handlebars/**/*.handlebars"
     
-    regarde:
-      js:
-        files: 'public/js/**/*.js'
-        tasks: ['minispade', 'livereload', 'regarde']
-      handlebars:
-        files: 'public/handlebars/**/*.handlebars'
-        tasks: ['ember_templates', 'livereload', 'regarde']
-      sass:
-        files: 'public/sass/**/*.sass'
-        tasks: ['sass', 'livereload', 'regarde']
-        
 
   grunt.loadNpmTasks('grunt-contrib-livereload')
   grunt.loadNpmTasks('grunt-contrib-sass')
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-ember-templates')
   grunt.loadNpmTasks('grunt-regarde')
   grunt.loadNpmTasks('grunt-minispade')
@@ -65,8 +42,3 @@ module.exports = (grunt) ->
                                         'sass',
                                         'minispade'
                                         'regarde'             ])
-
-  grunt.registerTask('noreload', [
-                                        'ember_templates',
-                                        'sass',
-                                        'minispade'           ])
